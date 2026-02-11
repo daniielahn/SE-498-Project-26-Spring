@@ -1,11 +1,43 @@
-@Project498.WebApi_HostAddress = http://localhost:5031
+@HostAddress = http://localhost:5031
 
-GET {{Project498.WebApi_HostAddress}}/weatherforecast/
+# Weather sample
+GET {{HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
 
-GET {{Project498.WebApi_HostAddress}}/strings/reverse/hello
+# Strings - reverse: simple
+GET {{HostAddress}}/strings/reverse/hello
+Accept: application/json
+
+###
+
+# Strings - reverse: palindrome
+GET {{HostAddress}}/strings/reverse/racecar
+Accept: application/json
+
+###
+
+# Strings - reverse: with space
+GET {{HostAddress}}/strings/reverse/hello%20world
+Accept: application/json
+
+###
+
+# Strings - reverse: with double space
+GET {{HostAddress}}/strings/reverse/hello%20%20world
+Accept: application/json
+
+###
+
+# Strings - reverse: leading space
+GET {{HostAddress}}/strings/reverse/%20hello%20world
+Accept: application/json
+
+###
+
+# Strings - reverse: trailing space
+GET {{HostAddress}}/strings/reverse/hello%20world%20
 Accept: application/json
 
 ###
